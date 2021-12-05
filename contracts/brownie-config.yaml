@@ -1,0 +1,24 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.4.0
+compiler:
+  solc:
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.4.0'
+dotenv: .env
+wallets:
+  from_key: ${PRIVATE_KEY}
+networks:
+  default: ganache-local
+  fuji:
+    eth_usd_price_feed: '0x319fa2b82a1BA48bf17c5322C70FDeA231a012ee'
+    verify: True
+  rinkeby:
+    eth_usd_price_feed: '0x319fa2b82a1BA48bf17c5322C70FDeA231a012ee'
+    verify: True
+  mainnet-fork-dev:
+    eth_usd_price_feed: '0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419'
+    verify: False
+  development:
+    verify: False
+  ganache-local:
+    verify: False
